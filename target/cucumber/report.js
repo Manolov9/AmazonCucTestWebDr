@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 3168873209,
+  "duration": 3469562392,
   "status": "passed"
 });
 formatter.scenario({
@@ -41,26 +41,4 @@ formatter.step({
 });
 formatter.match({
   "location": "Steps.Amazon_Book()"
-});
-formatter.result({
-  "duration": 3252818941,
-  "error_message": "java.lang.IllegalMonitorStateException\r\n\tat java.lang.Object.wait(Native Method)\r\n\tat steps.Steps.Amazon_Book(Steps.java:47)\r\n\tat ✽.Given : Add book test in amazon(features/Amazon.feature:6)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "Steps.Verify_Steps()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Steps.AddBasket_Verify()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 1326808906,
-  "status": "passed"
-});
 });

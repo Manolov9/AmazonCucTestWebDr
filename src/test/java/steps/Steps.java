@@ -44,7 +44,7 @@ public class Steps {
     @Given("^: Add book test in amazon$")
     public void Amazon_Book() throws Exception {
         driver.get("http://google.com/");
-        driver.wait(300000);
+        Thread.sleep(100000);
     Assert.assertEquals("Text", driver.findElement(By.id("Text")).getText());
 
         driver.findElement(By.id("Text")).click();
