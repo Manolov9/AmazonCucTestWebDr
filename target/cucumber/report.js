@@ -1,44 +1,67 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Amazon.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/API.feature");
 formatter.feature({
   "line": 1,
-  "name": "Add and verify in AMAZON.co.uk",
-  "description": "Add book in basket and verify",
-  "id": "add-and-verify-in-amazon.co.uk",
+  "name": "Verify Local test",
+  "description": "",
+  "id": "verify-local-test",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 3469562392,
+  "duration": 3980470187,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 5,
-  "name": "Add book in basket and verify",
+  "line": 4,
+  "name": "Navigate to Local check pageE",
   "description": "",
-  "id": "add-and-verify-in-amazon.co.uk;add-book-in-basket-and-verify",
+  "id": "verify-local-test;navigate-to-local-check-pagee",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 4,
-      "name": "@complete"
+      "line": 3,
+      "name": "@completeAPI"
     }
   ]
 });
 formatter.step({
-  "line": 6,
-  "name": ": Add book test in amazon",
+  "line": 5,
+  "name": "I amsS on the website \u0027http://api.plos.org/search?q\u003dtitle:DNA\u0027",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
-  "name": ": Verify book steps in amazon",
+  "line": 6,
+  "name": "query content for the right properties \u0027http://api.plos.org/search?q\u003dtitle:DNA\u0027",
   "keyword": "When "
 });
-formatter.step({
-  "line": 8,
-  "name": ": Complete test verify add book basket",
-  "keyword": "Then "
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://api.plos.org/search?q\u003dtitle:DNA",
+      "offset": 23
+    }
+  ],
+  "location": "CheckXML.I_amS_on_the_website(String)"
+});
+formatter.result({
+  "duration": 2300286720,
+  "status": "passed"
 });
 formatter.match({
-  "location": "Steps.Amazon_Book()"
+  "arguments": [
+    {
+      "val": "http://api.plos.org/search?q\u003dtitle:DNA",
+      "offset": 40
+    }
+  ],
+  "location": "CheckXML.query_content_for_the_right_properties(String)"
+});
+formatter.result({
+  "duration": 633113600,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1254245120,
+  "status": "passed"
+});
 });

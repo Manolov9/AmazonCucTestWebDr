@@ -5,10 +5,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(strict = true,
-        features = {"classpath:features/Amazon.feature"},
+        features = {"classpath:features/API.feature"},
         format = {"pretty","html:target/cucumber"},
-        tags = {"@complete"})
+        tags = {"@completeAPI"})
 
 
-public class RunTest {
+public class RunTestAPI {
 }

@@ -23,9 +23,9 @@ import java.util.concurrent.TimeUnit;
 
 
 public class Steps {
-    //public static final String USERNAME = "ilianavajarova1";
-    //public static final String AUTOMATE_KEY = "anQesbpRtAnE2aYhxQxd";
-    //public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+   /* public static final String USERNAME = "lachezarmanolov1";
+    public static final String AUTOMATE_KEY = "ByUf17SGFR4YDpRgiKSG";
+    public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";*/
 
     private WebDriver driver;
     private boolean acceptNextAlert = true;
@@ -44,7 +44,7 @@ public class Steps {
     @Given("^: Add book test in amazon$")
     public void Amazon_Book() throws Exception {
         driver.get("http://google.com/");
-        Thread.sleep(100000);
+        Thread.sleep(10000);
     Assert.assertEquals("Text", driver.findElement(By.id("Text")).getText());
 
         driver.findElement(By.id("Text")).click();
@@ -96,39 +96,6 @@ public class Steps {
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
-        }
-    }
-
-    private boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-
-    private boolean isAlertPresent() {
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
-    private String closeAlertAndGetItsText() {
-        try {
-            Alert alert = driver.switchTo().alert();
-            String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
         }
     }
 }
